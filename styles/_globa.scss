@@ -1,0 +1,30 @@
+//variables
+$income: #28b9b5;
+$expenses: #ff5049;
+
+html {
+   // 1rem = 10px
+   font-size: 62.5%;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   color: #555;
+   font-family: Open Sans;
+   font-size: 16px;
+   //    position: relative;
+   //    height: 100vh;
+   font-weight: 400;
+}
+
+@mixin flex($justifyContent, $alingItems, $direction) {
+   display: flex;
+   justify-content: $justifyContent;
+   align-items: $alingItems;
+   flex-direction: $direction;
+}

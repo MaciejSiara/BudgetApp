@@ -1,0 +1,116 @@
+.items__container {
+//    max-width: 100rem;
+   margin: 6rem 2rem;
+   @include flex(center, flex-start, row);
+   width: 100%;
+}
+
+.income,
+.expenses {
+   width: 47rem;
+
+   &__title {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+   }
+}
+
+.income {
+   margin-right: 5rem;
+
+   &__title {
+      color: $income;
+   }
+
+   .item__cost__value,
+   .item__cost__delete-btn {
+      color: $income;
+   }
+}
+
+.expenses {
+   &__title {
+      color: $expenses;
+   }
+
+   .item__cost__value,
+   .item__cost__percentage,
+   .item__cost__delete-btn {
+      color: $expenses;
+   }
+}
+
+.item {
+   padding: 1.3rem;
+   border-bottom: 1px solid #e7e7e7;
+   @include flex(space-between, center, row);
+
+   &:first-child {
+      border-top: 1px solid #e7e7e7;
+   }
+   &:nth-child(even) {
+      background-color: #f7f7f7;
+   }
+
+   &:hover .item__cost__delete-btn{
+       display: block;
+   }
+
+   &:hover .item__cost__value{
+       transform: translateX(-2rem);
+   }
+
+   &:hover .item__cost__percentage{
+       transform: translateX(-2rem);
+   }
+
+   &__cost {
+      @include flex(space-between, center, row);
+      &__value {
+         transition: transform 0.3s;
+      }
+
+      &__percentage {
+         margin-left: 2rem;
+         font-size: 1.1rem;
+         background-color: #ffdad9;
+         padding: 0.3rem;
+         border-radius: 0.3rem;
+         width: 3.2rem;
+         text-align: center;
+         transition: transform .3s;
+      }
+
+      &__delete-btn{
+          font-size: 2.2rem;
+          background: none;
+          border: none;
+          cursor: pointer;
+          vertical-align: middle;
+          margin-left: 1rem;
+          display: none;
+          line-height: .9;
+
+          &:focus{
+              outline: none;
+          }
+
+          &:active{
+              transform: translateY(.2rem);
+          }
+      }
+   }
+}
+
+.unpaid{
+    background-color: #ffdad9 !important;
+    cursor: pointer;
+    color: #ff5049;
+
+    .item__cost__percentage{
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+}

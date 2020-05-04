@@ -1,0 +1,84 @@
+.top {
+   min-height: 40vh;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+      url("../assets/back.png");
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   @include flex(center, center, column);
+}
+
+.budget {
+   position: absolute;
+   width: 30%;
+   min-width: 35rem;
+   height: 100%;
+   @include flex(center, center, column);
+   color: #ffffff;
+
+   &__title {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 1rem;
+      font-weight: 300;
+      width: 100%;
+      align-self: flex-start;
+   }
+
+   &__value {
+      text-align: center;
+      font-size: 4.6rem;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+      letter-spacing: 0.2rem;
+      width: 100%;
+   }
+
+   &__income,
+   &__expenses {
+      padding: 1.2rem;
+      text-transform: uppercase;
+      @include flex(space-between, center, row);
+      width: 100%;
+
+      &__right-box {
+         flex: 1 1 20rem;
+         @include flex(flex-end, center, row);
+         width: 100%;
+      }
+
+      &-text {
+         flex: 1 1 30rem;
+         font-size: 1.3rem;
+         color: #444;
+         margin-top: 0.2rem;
+         font-weight: 800;
+      }
+
+      &-value {
+         letter-spacing: 1px;
+         margin-right: 1rem;
+      }
+
+      &-percentage {
+         text-align: center;
+         width: 3.4rem;
+         font-size: 1.1rem;
+         padding: 0.3rem 0;
+      }
+   }
+
+   &__income {
+      margin-bottom: 1rem;
+      background-color: $income;
+   }
+
+   &__expenses {
+      background-color: $expenses;
+
+      &-percentage {
+         background-color: rgba(255, 255, 255, 0.2);
+         border-radius: 3px;
+      }
+   }
+}

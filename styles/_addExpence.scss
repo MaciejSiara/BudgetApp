@@ -1,0 +1,66 @@
+.add {
+   padding: 1.4rem;
+   border-bottom: 1px solid #e7e7e7;
+   background-color: #f7f7f7;
+
+   &__container {
+      margin: 0 auto;
+      text-align: center;
+   }
+
+   &__type {
+      width: 5.5rem;
+      height: 4.4rem;
+      border: 1px solid #e7e7e7;
+      font-size: 1.8rem;
+      color: inherit;
+      background-color: #fff;
+      margin-right: 1rem;
+      font-weight: 300;
+      transition: border 0.3s;
+   }
+
+   &__description,
+   &__value {
+      border: 1px solid #e7e7e7;
+      background-color: #fff;
+      color: inherit;
+      font-family: inherit;
+      font-size: 1.4rem;
+      padding: 1.2rem 1.5rem;
+      margin-right: 1rem;
+      border-radius: 0.5rem;
+      transition: border 0.3s;
+   }
+
+   &__description {
+      width: 40rem;
+   }
+
+   &__value {
+      width: 10rem;
+   }
+
+   &__btn {
+      font-size: 3.5rem;
+      background: none;
+      border: none;
+      color: $income;
+      cursor: pointer;
+      margin-left: 10px;
+      vertical-align: middle;
+      outline: none;
+
+      &:active {
+         transform: translateY(0.2rem);
+      }
+   }
+
+   &__type:focus,
+   &__description:focus,
+   &__value:focus {
+      outline: none;
+      border: 1px solid $income;
+   }
+}
+
